@@ -116,12 +116,12 @@ def connect_mqtt():
 ################################################################
 
 #host = '169.254.10.124'
-#port = 1883
+port = 1883
+
 client_id = "stalker"
 username = "Stalker"
 password = "password"
 topic = "Motors"
-
 
 msg_cache = None
 #################################################################
@@ -212,6 +212,4 @@ while True:
     msg_cache = msg
     sleep(2)
  
-
-
 print("Aturat")
