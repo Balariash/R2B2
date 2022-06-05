@@ -8,7 +8,7 @@ from gpiozero.pins.pigpio import PiGPIOFactory
 import gpiozero
 from motor import Motor
 from orders import Actions
-from config import host, port
+from config import host
 
 #########################################################################
 
@@ -135,6 +135,8 @@ def subscribe(client: mqtt):
 
 #######################################################################
 mqtt.Client.connected_flag=False
+
+port = 1883
 
 client_id = "Nemo"
 username = "Node"
