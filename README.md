@@ -5,3 +5,6 @@ Double click on index.html to open the web interface.
 The file mosquitto.conf is needed to use the web interface.
 
 Place this file in /etc/mosquitto/conf.d/ directory.
+
+
+You need to specificate de IP of the MQTT Broker in config.py.
