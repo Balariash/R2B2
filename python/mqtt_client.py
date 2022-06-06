@@ -49,14 +49,18 @@ def on_message(client, userdata, message):
     print("message received ", str(message.payload.decode("utf-8")))
     topic_ = str(message.topic)  
     if topic_ == "Motors":
-        msg = json.loads(message.payload.decode())
+        msg = json.loads(message.payload.decode()) # Llista de missatges rebuts
         if msg[0] == "up":
+            spd_l = float(msg[1])
+            spd_r = float(msg[2])
             client.publish(topic, "UP")
-            robot.up()
+            robot.up(spd_l, spd_r)
             
         elif msg[0] == "dwn":
+            spd_l = float(msg[1])
+            spd_r = float(msg[2])
             client.publish(topic, "DOWN")
-            robot.down()
+            robot.down(spd_l, spd_r)
             
         elif msg[0] == "fwd":
             spd_l = float(msg[1])

@@ -5,7 +5,7 @@ import paho.mqtt.client as mqtt
 from scipy import ndimage
 from time import sleep
 import json
-from config import host, port
+from config import host
 
 ##################################################################
 
@@ -123,6 +123,7 @@ username = "Stalker"
 password = "password"
 topic = "Motors"
 
+
 msg_cache = None
 #################################################################
 client = connect_mqtt()
@@ -184,19 +185,19 @@ while True:
         if py == 0:
             msg = "up"
             if msg != msg_cache:
-                client.publish(topic, json.dumps([msg]))
+                client.publish(topic, json.dumps([msg, 0.2, 0.2]))
                 print("up")
             
         elif py == 1:
             msg = "fwd"
             if msg != msg_cache:
-                client.publish(topic, json.dumps([msg, 0.2, 0.2]))
+                client.publish(topic, json.dumps([msg, 0.3, 0.3]))
                 print("fwd")
             
         elif py == 2:
             msg = "dwn"
             if msg != msg_cache:
-                client.publish(topic, json.dumps([msg]))
+                client.publish(topic, json.dumps([msg, 0.2, 0.2]))
                 print("dwn")
             
     elif px == 2:
@@ -212,4 +213,6 @@ while True:
     msg_cache = msg
     sleep(2)
  
+
+
 print("Aturat")

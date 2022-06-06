@@ -12,6 +12,12 @@ class Actions(Motor):
 
     Aquesta clase defineix el moviment del robot.
 
+    Els pins s'han de introduir en el següent ordre:
+      1. Motor vertical esquerra
+      2. Motor vertical dreta
+      3. Motor horitzontal esquerra
+      4. Motor horitzontal dreta
+
     """
     def __init__(self, *pins):
         self.motorVE = Motor(pins[0])
