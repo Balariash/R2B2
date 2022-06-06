@@ -1,0 +1,30 @@
+Informació sobre les peces:
+
+Suport de la càmera:
+
+    - El gruix de la pesa ha de ser de uns 5mm.
+    - Els quatre forats petits són de 2mm de diàmetre, la mateixa mida que els forats de la càmera.
+    - Els dos forats més grans són de 6mm de diàmetre per permetre passar una barra roscada.
+    - El costat curt del rectangle de mesurar entre 6 i 8mm.
+
+
+Suport de la batèria LIPO:
+    
+    - El gruix ha de ser de uns 8mm.
+    - Els dos forats menors han de ser de 4mm de diàmetre.
+    - Els tres forats majors han de ser de 6mm de diàmetre.
+
+
+Suport de la batèria de la Raspberry:
+
+    - El gruix ha de ser de uns 8mm.
+    - Els dos forats menors han de ser de 4mm de diàmetre.
+    - El forat gran ha de ser de 6mm de diàmetre.
+    - Els extrems poden quedar arrodonits.
+
+
+Barra de unió:
+
+    - El gruix de la barra ha de ser de 6~7mm-
+    - Els forats han de ser de 4mm.
+    - Són necessàries dues peces d'aquest tipus.
