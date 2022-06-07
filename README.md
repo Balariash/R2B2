@@ -1,10 +1,10 @@
 # R2B2
 Double click on index.html to open the web interface.
 
-
-The file mosquitto.conf is needed to use the web interface.
+# Mosquitto
+The file mosquitto.conf is needed to use MQTT over websockets.
 
 Place this file in /etc/mosquitto/conf.d/ directory.
 
-
-You need to specificate de IP of the MQTT Broker in config.py.
+# Python
+You need to specificate the IP of MQTT Broker in the variable host from config.py to use mqtt_client.py script
