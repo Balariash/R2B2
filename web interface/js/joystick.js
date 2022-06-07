@@ -181,11 +181,8 @@ Joystick.prototype.stop_drawing = function() {
   // Stop drawing the joystick move.
   if (this.paint) {
     this.goto_center();
-    //this.launch_callback();
-    window.stop();
   }
   this.paint = false;
-  //this.launch_callback();
   window.stop();
 }
 

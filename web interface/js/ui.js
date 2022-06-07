@@ -85,31 +85,43 @@ function joystick_move(x, y) {
 	return;
     }
     window._last_move = now;
-    if (y >= 0 && x > 0) {
-	let spd = Math.min(Math.sqrt(x**2 + y**2), 1);
-	let spd_l = spd;
-	let spd_r = spd - x;
-	window.move_forward(spd_l, spd_r);
+    if (y >= 0) {
+	if (x <= 0.2 && x >= -0.2) {
+	    let spd = Math.min(Math.sqrt(x**2 + y**2), 1);
+	    window.move_forward(spd, spd);
+	}
+	else if (x > 0.2) {
+	    let spd = Math.min(Math.sqrt(x**2 + y**2), 1);
+	    let spd_l = spd;
+	    let spd_r = spd - x;
+	    window.move_forward(spd_l, spd_r);
+	}
+	else if (x < -0.2) {
+	    let spd = Math.min(Math.sqrt(x**2 + y**2), 1);
+	    let spd_l = spd + x;
+	    let spd_r = spd;
+	    window.move_forward(spd_l, spd_r);
+	}
     }
-    else if (y > 0 && x <= 0) {
-	let spd = Math.min(Math.sqrt(x**2 + y**2), 1);
-	let spd_l = spd + x;
-	let spd_r = spd;
-	window.move_forward(spd_l, spd_r);
+    else if (y <= -0) {
+	if (x <= 0.2 && x >= -0.2) {
+	    let spd = Math.min(Math.sqrt(x**2 + y**2), 1);
+	    window.move_backward(spd, spd);
+	}
+	else if (x > 0.2) {
+	    let spd = Math.min(Math.sqrt(x**2 + y**2), 1);
+	    let spd_l = spd;
+	    let spd_r = spd - x;
+	    window.move_backward(spd_l, spd_r);
+	}
+	else if (x < -0.2) {
+	    let spd = Math.min(Math.sqrt(x**2 + y**2), 1);
+	    let spd_l = spd + x;
+	    let spd_r = spd;
+	    window.move_backward(spd_l, spd_r);
+	}
     }
-    else if (y <= 0 && x < 0) {
-	let spd = Math.min(Math.sqrt(x**2 + y**2), 1);
-	let spd_l = spd + x;
-	let spd_r = spd;
-	window.move_backward(spd_l, spd_r);
-    }
-    else if (y < 0 && x >= 0) {
-	let spd = Math.min(Math.sqrt(x**2 + y**2), 1);
-	let spd_l = spd;
-	let spd_r = spd - x;
-	window.move_backward(spd_l, spd_r);
-    }
-    else if (y == 0 && x == 0) {
+    else {
 	window.stop();
     };
     console.log("joystick: ", x, y);

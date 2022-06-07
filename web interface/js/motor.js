@@ -38,13 +38,13 @@ function sub_mqtt_msg(callback, error) {
 
 function emerge() {
     let action = "up";
-    const msg = JSON.stringify([action, 0]);
+    const msg = JSON.stringify([action, 0, 0]);
     window.mqtt.send(TOPICS[1],msg); 
 }
 
 function immerse() {
     let action = "dwn";
-    const msg = JSON.stringify([action, 0]);
+    const msg = JSON.stringify([action, 0, 0]);
     window.mqtt.send(TOPICS[1],msg); 
 }
 

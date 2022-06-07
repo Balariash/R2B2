@@ -17,7 +17,6 @@ function start_connection() {
   window.mqtt.on_connect(() => {
     ui_connecting_animation(false);
     pantalla('panel');
-    open_fullscreen();
     message('Connected to robot ✔');
   });
   window.mqtt.connect();
